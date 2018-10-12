@@ -1,0 +1,67 @@
+{% extends 'layout.html' %}
+
+{% block body%}
+<section class="product-details">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-6 py-3 order-2 order-lg-1">
+            <div data-slider-id="1" class="owl-carousel owl-theme owl-dots-modern detail-full">
+            	<img src="../static/img/{{ item[0] }}.jpg" alt="product" class="img-fluid"/>
+            </div>
+          </div>
+<div class="d-flex align-items-center col-lg-6 col-xl-5 pl-lg-5 mb-5 order-1 order-lg-2">
+    <div>
+    	<h1 class="mb-4">{{ item[4] }}</h1>
+    	<div class="d-flex flex-column flex-sm-row align-items-sm-center justify-content-sm-between mb-4">
+                <ul class="list-inline mb-2 mb-sm-0">
+                  <li class="list-inline-item h4 font-weight-light mb-0">${{ item[6] }}</li>
+                </ul>
+              </div>
+              <p class="mb-4 text-muted">{{ item[3] }}</p>
+              <form action="#">
+                <div class="row">
+                  <div class="col-sm-6 col-lg-12 detail-option mb-3">
+                    <h6 class="detail-option-heading">Size <span>(required)</span></h6>
+                    <label for="size_0" class="btn btn-sm btn-outline-secondary detail-option-btn-label">
+                       
+                      Small
+                      <input type="radio" name="size" value="value_0" id="size_0" required class="input-invisible">
+                    </label>
+                    <label for="size_1" class="btn btn-sm btn-outline-secondary detail-option-btn-label">
+                       
+                      Medium
+                      <input type="radio" name="size" value="value_1" id="size_1" required class="input-invisible">
+                    </label>
+                    <label for="size_2" class="btn btn-sm btn-outline-secondary detail-option-btn-label">
+                       
+                      Large
+                      <input type="radio" name="size" value="value_2" id="size_2" required class="input-invisible">
+                    </label>
+                  </div>
+                  <div class="col-12 detail-option mb-5">
+                    <label class="detail-option-heading font-weight-bold">Items <span>(required)</span></label>
+                    <input name="items" type="number" value="1" class="form-control detail-quantity">
+                  </div>
+                </div>
+                <ul class="list-inline">
+                  <li class="list-inline-item">
+                    <button type="submit" class="btn btn-dark btn-lg mb-1"> <i class="fa fa-shopping-cart mr-2"></i>Add to Cart</button>
+                  </li>
+                  <li class="list-inline-item"><a href="#" class="btn btn-outline-secondary mb-1"> <i class="far fa-heart mr-2"></i>Add To Favorite</a></li> 
+                </ul>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+      <section class="my-5">
+      <div class="container">
+        <header class="text-center">
+          <h6 class="text-uppercase mb-5">You might also like</h6>
+        </header>
+        <div class="row">
+      </section>
+
+
+{% endblock %}
